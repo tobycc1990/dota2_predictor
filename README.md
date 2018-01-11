@@ -1,2 +1,2 @@
 # dota2_predictor
-predict a dota2 match result according to BP info
+根据Dota2比赛的BP结果去预测本场比赛的胜负
