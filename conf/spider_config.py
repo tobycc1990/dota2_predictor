@@ -1,0 +1,1 @@
+steam_web_api_key = "587CF8955078B5B46CE9C3EBA4C234B6"

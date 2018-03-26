@@ -40,7 +40,8 @@ if __name__ == "__main__":
     latest_match = latest_match["matches"][0]
     latest_match_id = latest_match["match_id"]
     latest_match_start_time_ts = latest_match["start_time"]
-    
+    print latest_match_id, datetime.datetime.fromtimestamp(latest_match_start_time_ts)
+
     iter_match_id = latest_match_id
     iter_timestamp = latest_match_start_time_ts
     while (iter_timestamp > dueday_timestamp):
@@ -49,8 +50,9 @@ if __name__ == "__main__":
             break
         for each_match in match_lists["matches"]:
             each_match_id = each_match["match_id"]
+            if each_match_id == iter_match_id:
+                continue
             each_match_start_time = datetime.datetime.fromtimestamp(each_match["start_time"])
             print each_match_id, each_match_start_time
-            print each_match
         iter_timestamp = match_lists["matches"][-1]["start_time"]
         iter_match_id = match_lists["matches"][-1]["match_id"]
